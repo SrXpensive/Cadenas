@@ -5,9 +5,9 @@ public class Leer {
             new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
 
     /*
-    *Llig un text del teclat.
-    * @param mensaje Text que es passa a l'usuari
-    * @return el text introduit. Blanc en cas d'error
+    *Lee un texto del teclado.
+    * @param mensaje Texto que se pasa al usuario
+    * @return el texto introducido. Blanco en caso de error
      */
     public static String leerTexto(String mensaje){
         String respuesta = null;
@@ -24,20 +24,42 @@ public class Leer {
     }
 
     /*
-    * Introducció de nombres enters
-    * @param mensaje Missatge que es dona a l'usuari
-    * @return un enter amb el valor
+    * Introducción de números enteros
+    * @param mensaje Mensaje que se da al usuario
+    * @return un entero con el valor
      */
     public static int leerEntero(String mensaje){
         int n= 0;
-        boolean aconseguit = false;
-        while(!aconseguit){
+        boolean conseguido = false;
+        while(!conseguido){
             try{
                 n= Integer.parseInt(leerTexto(mensaje));
-                aconseguit=true;
+                conseguido=true;
             }
-            catch(NumberFormatException ex){}
+            catch(NumberFormatException ex){
+                System.out.println("Debes introducir un número correcto");
+            }
         }
+        return n;
+    }
+    /*
+    * Introducción de números decimales
+    * @param mensaje Mensaje que se da al usuario
+    * @return un decimal con el valor
+     */
+    public static double leerDouble(String mensaje){
+        double n=0.0;
+        boolean conseguido = false;
+        while (!conseguido){
+            try{
+                n=Double.parseDouble(leerTexto(mensaje));
+                conseguido = true;
+            }
+            catch(NumberFormatException ex){
+                System.out.println("Debes introducir un número correcto");
+            }
+        }
+        return n;
     }
 }
 
