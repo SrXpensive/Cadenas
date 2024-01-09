@@ -20,6 +20,8 @@ public class Main {
                 case 2:
                     Cadenas.ejer2();
                     break;
+                case 3:
+                    Cadenas.ejer3();
             }
         }while(opcion != 0);
         }

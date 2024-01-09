@@ -18,4 +18,14 @@ public class Cadenas {
         String reemplazo = Leer.leerTexto("Escribe la vocal por la que quieres reemplazar las anteriores: ");
         System.out.println(frase.replace(vocal,reemplazo));
     }
+    public static void ejer3(){
+        char letra;
+        String frase = Leer.leerTexto("Escribe una frase: ");
+        for (int i=frase.length()-1; i >= 0 ;i--){
+            letra = frase.charAt(i);
+            System.out.print(letra);
+        }
+        System.out.println();
+
+    }
 }
