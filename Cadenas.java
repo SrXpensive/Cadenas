@@ -33,6 +33,9 @@ public class Cadenas {
         }
     }
     public static void ejer4(){
-        
+        String frase  = Leer.leerTexto("Escribe una frase: ");
+        for (int i=0; i<frase.length();i++){
+            
+        }
     }
 }
