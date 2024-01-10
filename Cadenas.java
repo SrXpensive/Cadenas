@@ -21,11 +21,18 @@ public class Cadenas {
     public static void ejer3(){
         char letra;
         String frase = Leer.leerTexto("Escribe una frase: ");
+        StringBuilder aux = new StringBuilder();
         for (int i=frase.length()-1; i >= 0 ;i--){
             letra = frase.charAt(i);
-            System.out.print(letra);
+            aux.append(letra);
         }
-        System.out.println();
-
+        String reversa = aux.toString();
+        System.out.println(reversa);
+        if (reversa.equals(frase)){
+            System.out.println("Se trata de un palíndromo");
+        }
+    }
+    public static void ejer4(){
+        
     }
 }
