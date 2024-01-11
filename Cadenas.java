@@ -34,8 +34,34 @@ public class Cadenas {
     }
     public static void ejer4(){
         String frase  = Leer.leerTexto("Escribe una frase: ");
-        for (int i=0; i<frase.length();i++){
-            
+        char letra;
+        boolean a = false;
+        boolean e = false;
+        boolean i = false;
+        boolean o = false;
+        boolean u = false;
+        for (int inc=0; inc<frase.length();inc++){
+            letra = frase.charAt(inc);
+            switch(letra){
+                case ('a'):
+                    a = true;
+                    break;
+                case ('e'):
+                    e = true;
+                    break;
+                case ('i'):
+                    i = true;
+                    break;
+                case ('o'):
+                    o = true;
+                    break;
+                case ('u'):
+                    u = true;
+                    break;
+            }
+            if(a && e && i && o && u){
+                System.out.println("Están todas las vocales en tu frase");
+            }
         }
     }
 }
