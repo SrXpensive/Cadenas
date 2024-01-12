@@ -64,4 +64,49 @@ public class Cadenas {
             }
         }
     }
+    public static void ejer5(){
+        String frase = Leer.leerTexto("Escribe una frase: ");
+        char letra;
+        int contador=0;
+        for (int i = 0; i < frase.length();i++){
+            letra = frase.charAt(i);
+            switch(letra){
+                case '0':
+                    contador++;
+                    break;
+                case '1':
+                    contador++;
+                    break;
+                case '2':
+                    contador++;
+                    break;
+                case '3':
+                    contador++;
+                    break;
+                case '4':
+                    contador++;
+                    break;
+                case '5':
+                    contador++;
+                    break;
+                case '6':
+                    contador++;
+                    break;
+                case '7':
+                    contador++;
+                    break;
+                case '8':
+                    contador++;
+                    break;
+                case '9':
+                    contador++;
+                    break;
+            }
+        }
+        if (contador == frase.length()){
+            System.out.println("Todos los caracteres de la frase son números");
+        }else{
+            System.out.println("Hay letras en tu frase");
+        }
+    }
 }
